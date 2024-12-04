@@ -1,0 +1,4 @@
+.bg-reveal::before {
+    transform: translateY(0);
+    background-color: var(--bg-color);
+  }

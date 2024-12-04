@@ -1,0 +1,103 @@
+.section-padding {
+    padding: 60px 0;
+  }
+  .section-title {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .section-title .title {
+    display: inline-block;
+    font-size: var(--fs-lg);
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--main-color);
+    margin: 0 0 12px;
+    padding: 0 40px;
+    position: relative;
+  }
+  .section-title .title::before,
+  .section-title .title::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 34px;
+    background-color: var(--main-color);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .section-title .title::before {
+    left: 0;
+  }
+  .section-title .title::after {
+    right: 0;
+  }
+  .section-title .sub-title {
+    font-size: var(--fs-3xl);
+    text-transform: capitalize;
+  }
+  
+  
+  /* Button */
+  button {
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--text-white);
+    padding: 10px 28px;
+    font-weight: 500;
+    font-size: var(--fs-md);
+    text-transform: capitalize;
+    line-height: 1.5;
+    font-family: inherit;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    vertical-align: middle;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+  button a {
+    color: var(--text-white);
+  }
+  button a:hover {
+    background-color: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color);
+  }
+  
+  /* # forms */
+  .input-box {
+    margin-bottom: 20px;
+  }
+  ::placeholder {
+    color: var(--text-dark-gray);
+    opacity: 1; /*for override firefox's default opacity */
+  }
+  .input-control {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: var(--text-x-dark-gray);
+    padding: 0 20px;
+  }
+  .input-control:focus {
+    outline: 1px solid var(--border-color);
+  }
+  textarea.input-control {
+    display: block;
+    height: 150px;
+    padding-top: 15px;
+    resize: none;
+  }
+  @media (max-width: 575px) {
+  
+    /* # grid */
+    .grid {
+      gap: 30px 15px;
+    }
+  }

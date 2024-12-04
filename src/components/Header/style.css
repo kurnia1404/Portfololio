@@ -1,0 +1,112 @@
+.bg-reveal::before {
+  transform: translateY(0);
+  background-color: var(--bg-color);
+}
+.nav-toggler {
+  display: none;
+}
+
+.nav li {
+  display: inline-block;
+  margin-left: 35px;
+}
+
+.nav a {
+  text-transform: capitalize;
+  font-size: var(--fs-md);
+  color: var(--text-x-dark-gray);
+  font-weight: 400;
+  display: block;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+
+  /* # header */
+  .nav-toggler {
+    display: block;
+    height: 34px;
+    width: 40px;
+    border: none;
+    z-index: 1;
+    background-color: transparent;
+  }
+
+  .nav-toggler span {
+    display: block;
+    height: 2px;
+    width: 24px;
+    background-color: var(--main-color);
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-toggler.active span {
+    background-color: transparent;
+  }
+
+  .nav-toggler span::after,
+  .nav-toggler span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-toggler span::before {
+    transform: translateY(-7px);
+  }
+
+  .nav-toggler.active span::before {
+    transform: rotate(45deg);
+  }
+
+  .nav-toggler span::after {
+    transform: translateY(7px);
+  }
+
+  .nav-toggler.active span::after {
+    transform: rotate(-45deg);
+  }
+
+  .nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 260px;
+    background-color: var(--bg-color);
+    padding: 60px 30px 30px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+  }
+
+  .nav.open {
+    transform: translateX(0);
+    box-shadow: var(--shadow);
+    height: 100%;
+  }
+
+  .nav li {
+    display: block;
+    margin: 0;
+  }
+
+  .nav a {
+    font-size: var(--fs-lg);
+  }
+
+  .nav li+li {
+    border-top: 1px solid var(--border-color);
+  }
+}

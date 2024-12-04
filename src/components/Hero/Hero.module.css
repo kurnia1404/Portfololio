@@ -1,0 +1,193 @@
+/* # home */
+.home {
+    padding: 100px 0 60px;
+  }
+  .homeText,
+  .homeImg {
+    grid-column: span 6;
+    align-self: center;
+  }
+  .homeText h1 {
+    font-size: var(--fs-4xl);
+    margin: 0 0 20px;
+    text-transform: capitalize;
+  }
+  .homeText p {
+    margin: 0 0 30px;
+  }
+  .homeImg {
+    position: relative;
+  }
+  .homeImg .circleWrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+  }
+  .homeImg .circle {
+    height: 350px;
+    width: 350px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Curve */
+  .homeImg .curvedWrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+  }
+  /* HTML: <div class="curved-edge"></div> */
+  .homeImg .curved {
+    --c: 70px; /* control the curvature (works with percentage) */
+    height: 450px;
+    aspect-ratio: 1;
+    /* you can also update the 60%  */
+    mask: radial-gradient(60% var(--c) at 50% var(--c),#0000 calc(100% - 2px),#000) 0 calc(-1*var(--c));
+    background-color: var(--main-color);
+    transform: translate(-50%, -50%);
+}
+  .homeImg img {
+    max-width: 270px;
+    display: block;
+    margin: auto;
+  }
+
+
+  @media (max-width: 991px) {
+  
+    /* # home */
+    .homeImg img {
+      max-width: 250px;
+    }
+  
+    .homeImg .circle {
+      height: 290px;
+      width: 290px;
+    }
+    .homeImg .filmstrip {
+      height: 290px;
+      width: 290px;
+    }
+    .homeImg .square {
+      height: 290px;
+      width: 290px;
+    }
+    .homeImg .curved {
+      height: 290px;
+      width: 290px;
+    }
+  }
+  
+  /* # starBust */
+  
+  .homeImg .starburstWrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .homeImg .starburst {
+    width: 450px; 
+    aspect-ratio: 1;
+    background-color: var(--main-color);
+    /* clip-path: polygon(100% 50%,78.98% 57.76%,93.3% 75%,71.21% 71.21%,75% 93.3%,57.76% 78.98%,50% 100%,42.24% 78.98%,25% 93.3%,28.79% 71.21%,6.7% 75%,21.02% 57.76%,0% 50%,21.02% 42.24%,6.7% 25%,28.79% 28.79%,25% 6.7%,42.24% 21.02%,50% 0%,57.76% 21.02%,75% 6.7%,71.21% 28.79%,93.3% 25%,78.98% 42.24%); */
+    clip-path: polygon(100% 50%,78.98% 57.76%,93.3% 75%,71.21% 71.21%,75% 93.3%,57.76% 78.98%,50% 100%,42.24% 78.98%,25% 93.3%,28.79% 71.21%,6.7% 75%,21.02% 57.76%,0% 50%,21.02% 42.24%,6.7% 25%,28.79% 28.79%,25% 6.7%,42.24% 21.02%,50% 0%,57.76% 21.02%,75% 6.7%,71.21% 28.79%,93.3% 25%,78.98% 42.24%,100% 50%,78.98% 57.76%,calc(78.98% - 11.59px) calc(57.76% - 3.11px),calc(100% - 20px) calc(50% - 0px),calc(78.98% - 11.59px) calc(42.24% - -3.11px),calc(93.3% - 17.32px) calc(25% - -10px),calc(71.21% - 8.49px) calc(28.79% - -8.49px),calc(75% - 10px) calc(6.7% - -17.32px),calc(57.76% - 3.11px) calc(21.02% - -11.59px),calc(50% - 0px) calc(0% - -20px),calc(42.24% - -3.11px) calc(21.02% - -11.59px),calc(25% - -10px) calc(6.7% - -17.32px),calc(28.79% - -8.49px) calc(28.79% - -8.49px),calc(6.7% - -17.32px) calc(25% - -10px),calc(21.02% - -11.59px) calc(42.24% - -3.11px),calc(0% - -20px) calc(50% - 0px),calc(21.02% - -11.59px) calc(57.76% - 3.11px),calc(6.7% - -17.32px) calc(75% - 10px),calc(28.79% - -8.49px) calc(71.21% - 8.49px),calc(25% - -10px) calc(93.3% - 17.32px),calc(42.24% - -3.11px) calc(78.98% - 11.59px),calc(50% - 0px) calc(100% - 20px),calc(57.76% - 3.11px) calc(78.98% - 11.59px),calc(75% - 10px) calc(93.3% - 17.32px),calc(71.21% - 8.49px) calc(71.21% - 8.49px),calc(93.3% - 17.32px) calc(75% - 10px),calc(78.98% - 11.59px) calc(57.76% - 3.11px),calc(100% - 20px) calc(50% - 0px));
+    /* clip-path: polygon(0 0,100% 0,100% 100%,0 100%,0 0,calc(78.98% - 11.59px) calc(57.76% - 3.11px),calc(100% - 20px) calc(50% - 0px),calc(78.98% - 11.59px) calc(42.24% - -3.11px),calc(93.3% - 17.32px) calc(25% - -10px),calc(71.21% - 8.49px) calc(28.79% - -8.49px),calc(75% - 10px) calc(6.7% - -17.32px),calc(57.76% - 3.11px) calc(21.02% - -11.59px),calc(50% - 0px) calc(0% - -20px),calc(42.24% - -3.11px) calc(21.02% - -11.59px),calc(25% - -10px) calc(6.7% - -17.32px),calc(28.79% - -8.49px) calc(28.79% - -8.49px),calc(6.7% - -17.32px) calc(25% - -10px),calc(21.02% - -11.59px) calc(42.24% - -3.11px),calc(0% - -20px) calc(50% - 0px),calc(21.02% - -11.59px) calc(57.76% - 3.11px),calc(6.7% - -17.32px) calc(75% - 10px),calc(28.79% - -8.49px) calc(71.21% - 8.49px),calc(25% - -10px) calc(93.3% - 17.32px),calc(42.24% - -3.11px) calc(78.98% - 11.59px),calc(50% - 0px) calc(100% - 20px),calc(57.76% - 3.11px) calc(78.98% - 11.59px),calc(75% - 10px) calc(93.3% - 17.32px),calc(71.21% - 8.49px) calc(71.21% - 8.49px),calc(93.3% - 17.32px) calc(75% - 10px),calc(78.98% - 11.59px) calc(57.76% - 3.11px),calc(100% - 20px) calc(50% - 0px),calc(78.98% - 11.59px) calc(57.76% - 3.11px)); */
+    transform: translate(-50%,-50%);
+  }
+
+  /* # square */
+
+  .homeImg .squareWrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+  }
+  .homeImg .square {
+    height: 450px;
+    width: 400px;
+    background-color: var(--main-color);
+    /* border-radius: 50%; */
+    transform: translate(-60%, -50%);
+  }
+
+
+  /* # film-strip */
+
+  .homeImg .filmstripWrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+  }
+
+  .homeImg .filmstrip {
+    --s: 12px; /* control the size */
+    --c: #222;
+   
+    width: calc(20*var(--s));
+    aspect-ratio: 1.25;
+    background: 
+      conic-gradient(at 50% var(--s),var(--c) 75%,#0000 0) 
+      0 0/calc(2*var(--s)) calc(100% - var(--s)) padding-box;
+    border: var(--s) solid var(--c);
+    padding: calc(var(--s)*2.5) calc(var(--s)*1.5);
+    box-sizing: content-box;
+    transform: translate(-60%, -50%);
+    /* you can add a filter for an oldish effect 
+    filter: sepia(1) brightness(0.9) grayscale(.2);
+    */
+  }
+  
+  @media (max-width: 767px) {
+  
+    .homeText,
+    .homeImg {
+      grid-column: span 12;
+    }
+  
+    .homeImg {
+      order: -1;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+  
+    /* # home */
+    .homeImg img {
+      max-width: 200px;
+    }
+  
+    .homeImg .circle {
+      height: 250px;
+      width: 250px;
+    }
+    .homeImg .filmstrip {
+      height: 250px;
+      width: 250px;
+    }
+    .homeImg .square {
+      height: 250px;
+      width: 250px;
+    }
+    .homeImg .curved {
+      height: 250px;
+      width: 250px;
+    }
+  }
